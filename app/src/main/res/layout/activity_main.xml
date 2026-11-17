@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@drawable/bg_screen">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingTop="12dp">
+   <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_weather_logo" android:contentDescription="Biểu tượng ứng dụng thời tiết"/>
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:text="WEATHERLY" android:textSize="14sp" android:letterSpacing="0.17" android:textStyle="bold" android:textColor="#2663B5"/>
+  </LinearLayout>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Thời tiết hôm nay" android:textSize="29sp" android:textStyle="bold" android:textColor="#10254B" android:layout_marginTop="6dp"/>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Khám phá thời tiết ở bất kỳ thành phố nào" android:textSize="14sp" android:textColor="#7585A0" android:layout_marginTop="4dp" android:layout_marginBottom="22dp"/>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+   <EditText android:id="@+id/cityInput" android:layout_width="0dp" android:layout_weight="1" android:layout_height="54dp" android:paddingStart="16dp" android:paddingEnd="12dp" android:background="@drawable/bg_input" android:hint="⌕  Nhập tên thành phố" android:singleLine="true" android:inputType="textCapWords" android:textColor="#18345C" android:textColorHint="#8898B0" android:textSize="15sp"/>
+   <Button android:id="@+id/searchBtn" android:layout_width="100dp" android:layout_height="54dp" android:layout_marginStart="10dp" android:text="Tìm kiếm" android:textAllCaps="false" android:textColor="#FFFFFF" android:textStyle="bold" android:background="@drawable/bg_primary" android:backgroundTint="@null"/>
+  </LinearLayout>
+  <ProgressBar android:id="@+id/progress" android:layout_width="30dp" android:layout_height="30dp" android:layout_gravity="center" android:layout_marginTop="12dp" android:visibility="gone"/>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:background="@drawable/bg_hero" android:padding="24dp" android:orientation="vertical" android:elevation="5dp">
+   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="THỜI TIẾT HIỆN TẠI" android:textColor="#DCEEFF" android:textSize="12sp" android:textStyle="bold" android:letterSpacing="0.12"/>
+   <TextView android:id="@+id/heroCity" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Hà Nội" android:textColor="#FFFFFF" android:textSize="24sp" android:textStyle="bold" android:layout_marginTop="10dp"/>
+   <TextView android:id="@+id/heroIcon" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="☀" android:textColor="#FFFFFF" android:textSize="68sp" android:gravity="center" android:layout_marginTop="4dp"/>
+   <TextView android:id="@+id/heroTemp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="--°" android:textColor="#FFFFFF" android:textSize="64sp" android:textStyle="bold" android:gravity="center"/>
+   <TextView android:id="@+id/heroCondition" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Đang tải dữ liệu..." android:textColor="#EAF4FF" android:textSize="18sp" android:gravity="center"/>
+   <TextView android:id="@+id/heroUpdated" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:textColor="#D5E9FF" android:textSize="12sp" android:gravity="center" android:layout_marginTop="12dp"/>
+  </LinearLayout>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Chi tiết thời tiết" android:textColor="#142A4F" android:textStyle="bold" android:textSize="20sp" android:layout_marginTop="28dp" android:layout_marginBottom="12dp"/>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_card" android:orientation="vertical" android:padding="18dp">
+   <TextView android:id="@+id/result" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nhập tên thành phố để xem nhiệt độ, độ ẩm, lượng mưa và tốc độ gió." android:textColor="#344D70" android:textSize="16sp" android:lineSpacingExtra="8dp"/>
+  </LinearLayout>
+  <Button android:id="@+id/detailBtn" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="18dp" android:text="Xem dự báo 7 ngày  →" android:textAllCaps="false" android:textStyle="bold" android:textSize="16sp" android:textColor="#FFFFFF" android:background="@drawable/bg_primary" android:backgroundTint="@null" android:enabled="false"/>
+  <Button android:id="@+id/saveBtn" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="8dp" android:text="♡  Lưu thành phố yêu thích" android:textAllCaps="false" android:textStyle="bold" android:textColor="#1556C0" android:background="@drawable/bg_secondary" android:backgroundTint="@null" android:enabled="false"/>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Địa điểm yêu thích" android:textColor="#142A4F" android:textStyle="bold" android:textSize="20sp" android:layout_marginTop="28dp" android:layout_marginBottom="8dp"/>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Chạm để xem • Nhấn giữ để xóa" android:textColor="#8391A7" android:textSize="13sp" android:layout_marginBottom="12dp"/>
+  <LinearLayout android:id="@+id/favorites" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Dữ liệu cung cấp bởi Open-Meteo" android:gravity="center" android:textColor="#9AA9BD" android:textSize="12sp" android:layout_marginTop="24dp" android:layout_marginBottom="12dp"/>
+ </LinearLayout>
+</ScrollView>
